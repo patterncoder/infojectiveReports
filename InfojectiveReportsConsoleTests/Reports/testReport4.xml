@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<rules>
+When inputing parameters a dictionary of strings must match the list of parameters for each element.
+Each parameter must have a unique name.
+Because parameters are passed as strings there is no validation for the incoming parameters.
+</rules>-->
+<Report>
+  <Head>
+    <Name>Employee Logins</Name>
+    <Title>Employee Logins</Title>
+    <Description>Employee logins for these dates.</Description>
+    <Connection>Data Source=MsSql.oldtowndining.com;Initial Catalog=oldtowndining;User ID=oldtowndining;Password=y5EQJ5m7C3</Connection>
+    
+  </Head>
+  <Styles>
+    <Style name="CellBorderBottom">
+      <Border-Bottom value="1"/>
+    </Style>
+  </Styles>
+  <Layout>
+    <Margin-Top>78</Margin-Top>
+    <Margin-Bottom>36</Margin-Bottom>
+    <Margin-Left>36</Margin-Left>
+    <Margin-Right>36</Margin-Right>
+    <Orientation>Portrait</Orientation>
+    <Page-Size>Letter</Page-Size>
+  </Layout>
+  <PageHeader></PageHeader>
+  <Body>
+    <Text>This is a list of employees with their sign in code.</Text>
+    
+    <DataTable name="MenuItemTable" datasource="select emp_seq, last_name + ', ' + first_name as name, sign_in_code from sw.employees
+               order by last_name, first_name"
+               parameters="@StartDateDate;@EndDateDate" columnCount="2" tableWidth="540" columnWidths="1;5" >
+      
+        <Row>
+          <Cell  colSpan="1" borderWidth="0" binding="emp_seq"/>
+          <Cell  colSpan="2" borderWidth="0" binding="name"/>
+        </Row>
+        
+      <!--<Row>
+        <Cell width="1" colSpan="3" border="0" binding="sign_in_code"/>
+      </Row>-->
+      
+      
+    </DataTable>
+    
+  </Body>
+    
+  <PageFooter></PageFooter>
+  
+</Report>

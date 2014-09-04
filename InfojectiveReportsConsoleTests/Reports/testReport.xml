@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report>
+  <Head>
+    <Name>ReportName</Name>
+    <Title>Hello Title</Title>
+    <Description>This is the description.</Description>
+    <Connection>Data Source=laptop2\SQLExpress;Initial Catalog=dnndev_620;User ID=dnndev_620_user;Password=lemein1969</Connection>
+    <RequiredData>
+      <Parameter elementName="employee_policies" parameterName="@ModuleDefID" />
+    </RequiredData>
+  </Head>
+  <Layout>
+    <Margin-Top>72</Margin-Top>
+    <Margin-Bottom>72</Margin-Bottom>
+    <Margin-Left>72</Margin-Left>
+    <Margin-Right>72</Margin-Right>
+    <Orientation>Portrait</Orientation>
+    <Page-Size>Letter</Page-Size>
+  </Layout>
+  <PageHeader></PageHeader>
+    <Elements>
+      <Element name="employee_policies" type="table" datasourcetype="SQL" datasource="select ModuleDefID, FriendlyName, DesktopModuleID from ModuleDefinitions where ModuleDefID=@ModuleDefID" parameters="@ModuleDefID" margin-left="" margin-right="">
+        <ElementHeader>This is the element header</ElementHeader>
+        <Columns>
+          <Column name="ModuleDefID" headerText="ID" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+          <Column name="FriendlyName" headerText="Friendly Name" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+          <Column name="DesktopModuleID" headerText="Friendly Name" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+
+        </Columns>
+        <ElementFooter></ElementFooter>
+      </Element>
+      <Element name="employee_policies" type="table" datasourcetype="SQL" datasource="select ModuleDefID, FriendlyName, DesktopModuleID from ModuleDefinitions" parameters="" margin-left="" margin-right="">
+        <ElementHeader>This is the element header</ElementHeader>
+        <Columns>
+          <Column name="ModuleDefID" headerText="ID" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+          <Column name="FriendlyName" headerText="Friendly Name" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+
+        </Columns>
+        <ElementFooter></ElementFooter>
+      </Element>
+    </Elements>
+  <PageFooter></PageFooter>
+  
+</Report>

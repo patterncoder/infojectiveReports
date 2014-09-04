@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<rules>
+When inputing parameters a dictionary of strings must match the list of parameters for each element.
+Each parameter must have a unique name.
+Because parameters are passed as strings there is no validation for the incoming parameters.
+</rules>-->
+<Report>
+  <Head>
+    <Name>Employee Logins</Name>
+    <Title>Employee Logins</Title>
+    <Description>Employee logins for specified dates.</Description>
+    <Connection>Data Source=MsSql.oldtowndining.com;Initial Catalog=oldtowndining;User ID=oldtowndining;Password=y5EQJ5m7C3</Connection>
+    
+  </Head>
+  <Layout>
+    <Margin-Top>78</Margin-Top>
+    <Margin-Bottom>36</Margin-Bottom>
+    <Margin-Left>36</Margin-Left>
+    <Margin-Right>36</Margin-Right>
+    <Orientation>Portrait</Orientation>
+    <Page-Size>Letter</Page-Size>
+  </Layout>
+  <PageHeader></PageHeader>
+    <Elements>
+      <Element name="employeeInfo" type="table" datasourcetype="SQL" widthPercentage="100"
+               datasource="select e.id, e.first_name, e.last_name from sw.employees e where e.id=@employee_id" 
+               parameters="@employee_id" margin-left="" margin-right="">
+        <ElementHeader>This is the element header</ElementHeader>
+        <Columns>
+          <Column name="id" headerText="ID" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+          <Column name="first_name" headerText="First Name" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+          <Column name="last_name" headerText="Last Name" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+
+        </Columns>
+        <ElementFooter></ElementFooter>
+      </Element>
+      <Element name="employee_policies" type="table" datasourcetype="SQL" 
+               datasource="select ep.policy_id, ep.assigned_date, ep.acknowledged, p.title from 
+               sw.employee_policies ep inner join sw.policies p on ep.policy_id = p.id where ep.employee_id = @employee_id and ep.policy_id = @policy_id" 
+               parameters="@employee_id;@policy_id" margin-left="" margin-right="">
+        <ElementHeader>This is the element header</ElementHeader>
+        <Columns>
+          <Column name="title" headerText="Policy Title" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+          <Column name="acknowledged" headerText="Acknowledged?" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+          <Column name="assigned_date" headerText=""></Column>
+          <Column>
+            <Element name="employee_policies" type="table" datasourcetype="SQL"
+               datasource="select ep.policy_id, ep.assigned_date, ep.acknowledged, p.title from 
+               sw.employee_policies ep inner join sw.policies p on ep.policy_id = p.id where ep.employee_id = @employee_id "
+               parameters="@employee_id" margin-left="" margin-right="">
+              <Columns>
+                <Column name="title" headerText="Policy Title" width="" alignment="" colSpan="" nodeLevel="" sortOrder=""></Column>
+              </Columns>
+            </Element>
+            
+          </Column>
+        </Columns>
+        <ElementFooter></ElementFooter>
+      </Element>
+      <Element name="SomeText" type="text">
+        Can Do
+        1.  Create PDF and save to file
+        2.  Create a table with a sql call
+        3.  Create a nested table with sql call
+        To Do
+        1.  Handle nested tables
+        2.  Formatting refinements (borders, fonts, point size, bold)
+        3.  Column and Row span
+        4.  HTML encoded
+        5.  
+      </Element>
+    </Elements>
+  <PageFooter></PageFooter>
+  
+</Report>

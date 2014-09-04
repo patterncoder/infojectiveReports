@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<rules>
+When inputing parameters a dictionary of strings must match the list of parameters for each element.
+Each parameter must have a unique name.
+Because parameters are passed as strings there is no validation for the incoming parameters.
+</rules>-->
+<Report>
+  <Head>
+    <Name>Employee Logins</Name>
+    <Title>Employee Logins</Title>
+    <Description>Employee logins for these dates.</Description>
+    <Connection>Data Source=MsSql.oldtowndining.com;Initial Catalog=oldtowndining;User ID=oldtowndining;Password=y5EQJ5m7C3</Connection>
+    
+  </Head>
+  <Styles>
+    <Style name="CellBorderBottom">
+      <Border-Bottom value="1"/>
+    </Style>
+  </Styles>
+  <Layout>
+    <Margin-Top>78</Margin-Top>
+    <Margin-Bottom>36</Margin-Bottom>
+    <Margin-Left>36</Margin-Left>
+    <Margin-Right>36</Margin-Right>
+    <Orientation>Portrait</Orientation>
+    <Page-Size>Letter</Page-Size>
+  </Layout>
+  <PageHeader></PageHeader>
+  <Body>
+    
+    
+    <DataTable name="MenuItemTable" datasource="select mi.MenuLName, mi.MenuDescription
+ from oldtowndining.tblMenuItems mi
+where mi.MenuItemID between @start and @end"
+               parameters="@start;@end" columnCount="2" tableWidth="540" columnWidths="1;4" >
+      <Rows>
+        <Row>
+          <Cells>
+            <Cell></Cell>
+          </Cells>
+        </Row>
+        <Row>
+          <Cell></Cell>
+        </Row>
+      </Rows>
+      
+    </DataTable>
+    
+  </Body>
+    
+  <PageFooter></PageFooter>
+  
+</Report>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report xmlns="http://oldtowndining.com/schemas"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://oldtowndining.com/schemas ReportSchema.xsd" >
+
+  <Parameters>
+    <Parameter Name="@DateStart" ParameterType="int" ValidationText="YYYYMMDD Format"/>
+   
+  </Parameters>
+  
+  <Layout>
+    <Margin-Top>96</Margin-Top>
+    <Margin-Bottom>72</Margin-Bottom>
+    <Margin-Left>36</Margin-Left>
+    <Margin-Right>36</Margin-Right>
+    <Orientation>Portrait</Orientation>
+    <Page-Size>Letter</Page-Size>
+    <PageEvent>TwoColumnHeaderFooter</PageEvent>
+  </Layout>
+  <Head>
+    <Name>Server Sales</Name>
+    <Title>Server Sales</Title>
+    <Description>This is the sales for specified day.</Description>
+    <Connection>Micros</Connection>
+  </Head>
+  <Body>
+
+
+    <DataTable DataSource="SELECT ed.last_name + ', ' + ed.first_name as name, e.net_sls_ttl, 
+               (et.trk_ttl_59 + et.trk_ttl_60 - et.trk_ttl_61 - et.trk_ttl_62) as 'Amount Due',
+               et.trk_ttl_47 as 'AR', et.trk_ttl_48 as 'DepositRedeem',
+               et.trk_ttl_49 as 'GC Redeem',
+               et.trk_ttl_08 as 'CertSold' 
+               FROM micros.v_R_employee e inner join micros.v_r_employee_trk et on e.emp_seq = et.emp_seq
+               and e.shift_number = et.shift_number inner join micros.emp_def ed on ed.emp_seq = e.emp_seq
+               where CONVERT( CHAR(8), e.start_time, 112) = CONVERT( CHAR(8), @DateStart, 112) 
+               and  e.net_sls_ttl &lt;&gt; 0 order by ed.obj_num "
+               columnCount="7" columnWidths="3;1;1;1;1;1;1" >
+      <Row>
+        
+        <Cell binding="{name}" Header="Name" />
+        <Cell binding="{net_sls_ttl}" Header="Sales"/>
+        <Cell binding="{Amount Due}" Header="Cash Due"/>
+        <Cell binding="{AR}" Header="A/R"/>
+        <Cell binding="{DepositRedeem}" Header="Dep. Redeem"/>
+        <Cell binding="{GC Redeem}" Header="GC Redeem"/>
+        <Cell binding="{CertSold}" Header="Dep/GC Sold"/>
+      </Row>
+    </DataTable>
+
+    
+    
+    
+  </Body>
+  
+</Report>

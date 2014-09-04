@@ -1,0 +1,14 @@
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports\bin\Debug\InfojectiveReports.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports\bin\Debug\InfojectiveReports.pdb
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports\bin\Debug\itextsharp.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports\obj\Debug\InfojectiveReports.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports\obj\Debug\InfojectiveReports.pdb
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReports\bin\Debug\InfojectiveReports.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReports\bin\Debug\InfojectiveReports.pdb
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReports\bin\Debug\itextsharp.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReports\obj\Debug\InfojectiveReports.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReports\obj\Debug\InfojectiveReports.pdb
+C:\inetpub\dnndev_561\bin\InfojectiveReports.dll
+C:\inetpub\dnndev_561\bin\InfojectiveReports.pdb
+C:\Users\patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReports\obj\Debug\InfojectiveReports.csprojResolveAssemblyReference.cache

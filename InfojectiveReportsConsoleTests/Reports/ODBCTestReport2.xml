@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Report xmlns="http://oldtowndining.com/schemas"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://oldtowndining.com/schemas ReportSchema.xsd" >
+
+  <Parameters>
+    
+   
+  </Parameters>
+  
+  <Layout>
+    <Margin-Top>96</Margin-Top>
+    <Margin-Bottom>72</Margin-Bottom>
+    <Margin-Left>36</Margin-Left>
+    <Margin-Right>36</Margin-Right>
+    <Orientation>Portrait</Orientation>
+    <Page-Size>Letter</Page-Size>
+    <PageEvent>TwoColumnHeaderFooter</PageEvent>
+  </Layout>
+  <Head>
+    <Name>Site Users</Name>
+    <Title>dnndev_700 Site Users</Title>
+    <Description>This grabs the current website users.</Description>
+    <Connection>Micros</Connection>
+  </Head>
+  <Body>
+
+
+    <DataTable DataSource="select emp_seq, first_name, last_name from micros.emp_def " columnCount="3" columnWidths="1;4;4" >
+      <Row>
+        <Cell binding="{emp_seq}"/>
+        <Cell binding="{first_name}"/>
+        <Cell binding="{last_name}"/>
+      </Row>
+    </DataTable>
+
+    
+    
+    
+  </Body>
+  
+</Report>

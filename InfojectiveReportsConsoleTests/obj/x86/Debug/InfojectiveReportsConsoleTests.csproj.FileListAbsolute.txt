@@ -1,0 +1,17 @@
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReportsConsoleTests\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReportsConsoleTests\bin\Debug\InfojectiveReportsConsoleTests.exe
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReportsConsoleTests\bin\Debug\InfojectiveReportsConsoleTests.pdb
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReportsConsoleTests\bin\Debug\InfojectiveReports.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReportsConsoleTests\bin\Debug\InfojectiveReports.pdb
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReportsConsoleTests\obj\x86\Debug\InfojectiveReportsConsoleTests.exe
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReportsConsoleTests\obj\x86\Debug\InfojectiveReportsConsoleTests.pdb
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReportsConsoleTests\bin\Debug\itextsharp.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReportsConsoleTests\obj\x86\Debug\InfojectiveReportsConsoleTests.exe
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReportsConsoleTests\obj\x86\Debug\InfojectiveReportsConsoleTests.pdb
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReportsConsoleTests\bin\Debug\InfojectiveReportsConsoleTests.exe
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReportsConsoleTests\bin\Debug\InfojectiveReportsConsoleTests.pdb
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReportsConsoleTests\bin\Debug\InfojectiveReports.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReportsConsoleTests\bin\Debug\itextsharp.dll
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReportsConsoleTests\bin\Debug\InfojectiveReports.pdb
+C:\Users\Patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReportsConsoleTests\bin\Debug\InfojectiveReportsConsoleTests.exe.config
+C:\Users\patterncoder\Documents\Visual Studio 2010\Projects\InfojectiveReports2\InfojectiveReportsConsoleTests\obj\x86\Debug\InfojectiveReportsConsoleTests.csprojResolveAssemblyReference.cache
